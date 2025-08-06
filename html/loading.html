@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="./css/loading.css" rel="stylesheet" />
+</head>
+
+<body>
+    <video id="background-video" class="background-video" autoplay preload="metadata" muted>
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="red-overlay"></div>
+    <div class="red-glow"></div>
+
+    <div class="content">
+        <div class="header">
+            <div class="logo-section">
+                <img src="https://files.catbox.moe/i5g6xg.png" alt="Logo" class="logo">
+                <p class="description">florDevelopment is a great FiveM Development </p>
+                <div class="social-buttons">
+                    <a href="#" id="button-store" class="social-button">
+                        <i class="fas fa-store"></i>
+                        Store
+                    </a>
+                    <a href="#" id="button-discord" class="social-button">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                </div>
+            </div>
+
+            <div class="music-player">
+                <div class="music-info">
+                    <img src="" alt="Music Avatar" class="music-avatar">
+                    <div class="music-text">
+                        <h2 class="music-title">Floraiin</h2>
+                        <p class="music-artist">Music Artist</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="controls">
+                    <button class="control-button">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-section">
+            <i class="fas fa-spinner loading-icon"></i>
+            <div class="loading-text">
+                <h2 class="loading-title">Now Loading</h2>
+                <p class="loading-subtitle">Downloading Assets...</p>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar-large">
+                <div class="progress-large"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/loading.js"></script>
+</body>
+
+</html>

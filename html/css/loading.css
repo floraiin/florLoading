@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --theme-color: rgb(67, 166, 247);
+    --theme-color-rgb: 67, 166, 247;
+    --theme-glow: rgba(3, 140, 252, 0.65);
+    --theme-glow-rgb: 3, 140, 252;
+    --theme-overlay: rgba(3, 140, 252, 0.04);
+    --theme-overlay-rgb: 3, 140, 252;
+    --theme-glow-bg: rgba(3, 140, 252, 0.11);
+    --theme-glow-bg-rgb: 3, 140, 252;
+    --theme-color-dark: rgba(67, 166, 247, 0.3);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #131314;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(19, 19, 20, 0) 0%, rgba(19, 19, 20, 1) 100%);
+    z-index: 2;
+}
+
+.red-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-overlay);
+    z-index: 3;
+}
+
+.red-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 40%, var(--theme-glow-bg) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 4;
+}
+
+.content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+.logo {
+    width: 113px;
+    margin-left: -35px;
+    height: 113px;
+}
+
+
+.logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--theme-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 50px var(--theme-glow);
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    max-width: 440px;
+    line-height: 1.5;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-button:hover {
+    transition: all 0.5s ease;
+    width: 108px;
+    height: 32px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 1) 0%, rgba(153, 153, 153, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #131314;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.social-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+    width: 108px;
+    height: 32px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.music-player {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 300px;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.music-avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.music-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.music-title {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.music-artist {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--theme-color-dark);
+    border-radius: 999px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 76%;
+    background: var(--theme-color);
+    border-radius: 999px;
+    box-shadow: 0px 0px 50px var(--theme-glow);
+}
+
+
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.control-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.loading-section {
+    position: absolute;
+    bottom: 90px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.loading-icon {
+    width: 20px;
+    height: 20px;
+    color: #FFFFFF;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    transform-origin: 50% 50%;
+    text-align: center;
+    line-height: 20px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loading-title {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.loading-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+.progress-container {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+}
+
+.progress-bar-large {
+    width: 100%;
+    height: 20px;
+    background: var(--theme-color-dark);
+    border-radius: 4px;
+    position: relative;
+    backdrop-filter: blur(20px);
+}
+
+.progress-large {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 47.5%;
+    background: var(--theme-color);
+    border-radius: 4px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgba(147, 51, 51, 0), var(--theme-color)) 1;
+    box-shadow: 0px 0px 50px var(--theme-glow);
+}
